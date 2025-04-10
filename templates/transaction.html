@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transaction Fraud Check</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script defer>
+    function validateForm() {
+      const sender = document.querySelector('input[name="sender"]').value;
+      const receiver = document.querySelector('input[name="receiver"]').value;
+      const regex = /^[\w.-]+@[\w.-]+$/;
+      if (!regex.test(sender) || !regex.test(receiver)) {
+        alert("Please enter valid UPI IDs.");
+        return false;
+      }
+
+      const amount = parseFloat(document.getElementById('amount').value);
+      if (isNaN(amount) || amount <= 0) {
+        alert("Please enter a valid amount greater than 0.");
+        return false;
+      }
+
+      const hour = parseInt(document.querySelector('input[name="hour"]').value);
+      const minute = parseInt(document.querySelector('input[name="minute"]').value);
+      const second = parseInt(document.querySelector('input[name="second"]').value);
+      if (
+        isNaN(hour) || hour < 0 || hour > 23 ||
+        isNaN(minute) || minute < 0 || minute > 59 ||
+        isNaN(second) || second < 0 || second > 59
+      ) {
+        alert("Please enter a valid time (HH:MM:SS). Hour 0–23, Minute/Second 0–59.");
+        return false;
+      }
+
+      return true;
+    }
+
+    function setupValidation() {
+      const regex = /^[\w.-]+@[\w.-]+$/;
+      const fields = [
+        { id: 'sender', type: 'upi' },
+        { id: 'receiver', type: 'upi' },
+        { id: 'amount', type: 'amount' },
+        { id: 'hour', type: 'hour' },
+        { id: 'minute', type: 'minute' },
+        { id: 'second', type: 'second' }
+      ];
+
+      fields.forEach(({ id, type }) => {
+        const input = document.getElementById(id);
+        const msg = document.createElement('small');
+        msg.style.display = 'block';
+        msg.style.marginTop = '4px';
+        msg.style.fontSize = '0.85em';
+        input.parentNode.appendChild(msg);
+
+        input.addEventListener('input', () => {
+          let valid = false, message = '', color = '';
+
+          if (type === 'upi') {
+            valid = regex.test(input.value);
+            message = valid ? '✅ Valid UPI ID' : '❌ Invalid format (e.g., name@bank)';
+            color = valid ? '#28a745' : '#dc3545';
+          } else if (type === 'amount') {
+            const value = parseFloat(input.value);
+            valid = !isNaN(value) && value > 0;
+            message = valid ? '✅ Valid amount' : '❌ Must be greater than 0';
+            color = valid ? '#28a745' : '#dc3545';
+          } else {
+            const value = parseInt(input.value);
+            if (type === 'hour') valid = value >= 0 && value <= 23;
+            if (type === 'minute' || type === 'second') valid = value >= 0 && value <= 59;
+            message = valid ? '✅ OK' : `❌ Invalid ${type} value`;
+            color = valid ? '#28a745' : '#dc3545';
+          }
+
+          input.style.borderColor = color;
+          msg.textContent = message;
+          msg.style.color = color;
+        });
+      });
+    }
+
+    window.onload = setupValidation;
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>💰 UPI Transaction Fraud Detector</h2>
+    <form method="post" onsubmit="return validateForm()">
+      <label for="sender">Sender UPI ID</label>
+      <input type="text" name="sender" id="sender" placeholder="e.g., abc@upi" required pattern="^[\w.-]+@[\w.-]+$">
+
+      <label for="receiver">Receiver UPI ID</label>
+      <input type="text" name="receiver" id="receiver" placeholder="e.g., xyz@upi" required pattern="^[\w.-]+@[\w.-]+$">
+
+      <label for="amount">Amount (₹)</label>
+      <input type="number" name="amount" id="amount" placeholder="e.g., 1500" required min="1">
+
+      <label>Time of Transaction</label>
+      <div class="time-fields">
+        <input type="number" name="hour" id="hour" placeholder="Hour (0–23)" min="0" max="23" required>
+        <input type="number" name="minute" id="minute" placeholder="Minute (0–59)" min="0" max="59" required>
+        <input type="number" name="second" id="second" placeholder="Second (0–59)" min="0" max="59" required>
+      </div>
+
+      <button type="submit">🔍 Check Fraud</button>
+    </form>
+
+    {% if result %}
+    <div class="result {{ 'fraud' if result.is_fraud else 'success' }}">
+      {% if result.is_fraud %}
+        ⚠️ <strong>Potential Fraud Detected!</strong>
+      {% else %}
+        ✅ <strong>No Fraud Detected.</strong>
+      {% endif %}
+      <ul>
+        {% for risk in result.risks %}
+          <li>{{ risk }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div style="margin-top: 20px; text-align: center;">
+      <a href="/">🏠 Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

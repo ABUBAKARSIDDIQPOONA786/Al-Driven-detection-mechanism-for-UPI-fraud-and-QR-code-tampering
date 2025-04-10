@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Validator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>🔍 QR Code Phishing & UPI Validator</h2>
+    <form method="post" enctype="multipart/form-data">
+      <label for="qr_code">Upload UPI QR Code (PNG, JPG, JPEG):</label>
+      <input type="file" name="qr_code" id="qr_code" accept="image/*" required>
+      <button type="submit">🧪 Validate QR</button>
+    </form>
+
+    <div style="margin-top: 20px; text-align: center;">
+      <a href="/" class="nav-button" style="display: inline-block; margin-top: 16px;">⬅ Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

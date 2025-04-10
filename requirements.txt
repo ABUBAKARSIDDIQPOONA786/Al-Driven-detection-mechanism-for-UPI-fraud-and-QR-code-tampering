@@ -1,0 +1,11 @@
+flask
+opencv-python
+pyzbar
+pandas
+scikit-learn
+xgboost
+tensorflow
+tldextract
+beautifulsoup4
+python-whois
+joblib

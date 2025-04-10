@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Safety Report</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>🧾 QR Code Analysis Report</h2>
+
+    <div class="result success" style="white-space: pre-line;">
+      {{ report }}
+    </div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <a href="/qr-validator" class="nav-button" style="margin-bottom: 12px; display: inline-block;">🔄 Scan Another</a><br>
+      <a href="/">🏠 Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

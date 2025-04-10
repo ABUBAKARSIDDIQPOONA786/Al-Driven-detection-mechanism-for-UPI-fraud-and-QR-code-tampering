@@ -1,0 +1,95 @@
+Classification,MCC,Description,Category Type
+High Transacting Categories,5541,Service Stations(with out Ancillary services),POS
+High Transacting Categories,5411,Grocery Stores,POS
+High Transacting Categories,5411,Supermarkets,POS
+High Transacting Categories,5812,Eating Places and Restaurants,POS
+High Transacting Categories,9399,Government Services,POS
+High Transacting Categories,9399,Not Elsewhere Classified,POS
+High Transacting Categories,5921,Package Stores,POS
+High Transacting Categories,5921,Beer,POS
+High Transacting Categories,5921,Wine,POS
+High Transacting Categories,5921,Liquor,POS
+High Transacting Categories,5311,Department Stores,POS
+High Transacting Categories,5699,Miscellaneous Apparel and Accessory Stores,POS
+High Transacting Categories,8062,Hospitals,POS
+High Transacting Categories,5912,Drug Stores and Pharmacies,POS
+High Transacting Categories,4111,Local/Suburbn Commuter Passngr Transport/Ferries,POS
+Medium Transacting Categories,5813,"Drinking Places (Alcoholic Bev) - Bars, Taverns",POS
+Medium Transacting Categories,5651,Family Clothing Stores,POS
+Medium Transacting Categories,5944,Jewelry,POS
+Medium Transacting Categories,5944,Watches,POS
+Medium Transacting Categories,5944,Clocks ,POS
+Medium Transacting Categories,5944,Silverware Stores,POS
+Medium Transacting Categories,7011,"Lodging - Hotels, Motels, Resorts",POS
+Medium Transacting Categories,5691,Men's and Women's Clothing Stores,POS
+Medium Transacting Categories,5814,Fast Food Restaurants,POS
+Medium Transacting Categories,5462,Bakeries,POS
+Medium Transacting Categories,5732,Radio,POS
+Medium Transacting Categories,5732,Television,POS
+Medium Transacting Categories,5732,Stereo Stores,POS
+Medium Transacting Categories,5661,Shoe Stores,POS
+Medium Transacting Categories,4812,Telecomm Equipment including Telephone Sales,POS
+All Other Categories,5499,Misc Food,POS
+All Other Categories,5499,Convenience Stores,POS
+All Other Categories,5499,Speciality Markets,POS
+All Other Categories,4900,Utilities-Electric,POS
+All Other Categories,4900,Gas,POS
+All Other Categories,4900,Heating Oil,POS
+All Other Categories,4900,Sanitary,POS
+All Other Categories,4900,Water,POS
+All Other Categories,4814,Telecommunication Services,POS
+All Other Categories,5722,Household Appliance Stores,POS
+All Other Categories,8299,Schools and Educational Services,POS
+All Other Categories,7832,Motion Pictures Theaters,POS
+All Other Categories,5047,Dental,POS
+All Other Categories,5047,Laboratory,POS
+All Other Categories,5047,Medical,POS
+All Other Categories,5047,Ophthalmic Hospital Supp,POS
+All Other Categories,5137,"Men's, Women's, And Children's Uniforms",POS
+All Other Categories,5511,Auto and Truck Dealers(new and used) Sales,POS
+All Other Categories,5511,Auto and Truck Dealers(new and used) Service,POS
+All Other Categories,4112,Passenger Railways,POS
+High Transacting Categories,4900,Utilities-Electric,ECOM
+High Transacting Categories,4900,Gas,ECOM
+High Transacting Categories,4900,Heating Oil,ECOM
+High Transacting Categories,4900,Sanitary,ECOM
+High Transacting Categories,4900,Water,ECOM
+High Transacting Categories,9399,Government Services,ECOM
+High Transacting Categories,9399,Not Elsewhere Classified,ECOM
+High Transacting Categories,5411,Grocery Stores,ECOM
+High Transacting Categories,5411,Supermarkets,ECOM
+High Transacting Categories,4112,Passenger Railways,ECOM
+High Transacting Categories,5399,Miscellaneous General Merchandise Stores,ECOM
+High Transacting Categories,5699,Miscellaneous Apparel and Accessory Stores,ECOM
+High Transacting Categories,4814,Telecommunication Services,ECOM
+High Transacting Categories,6300,Insurance - Sales and Underwriting,ECOM
+High Transacting Categories,5816,Digital Goods: Games,ECOM
+High Transacting Categories,6540,Debit Card to wallet Credit,ECOM
+Medium Transacting Categories,5814,Fast Food Restaurants,ECOM
+Medium Transacting Categories,7399,Business Services,ECOM
+Medium Transacting Categories,7399,Not Elsewhere Classified,ECOM
+Medium Transacting Categories,8220,Colleges,ECOM
+Medium Transacting Categories,8220,Universities,ECOM
+Medium Transacting Categories,8220,Professional Schools and Jr,ECOM
+Medium Transacting Categories,6513,Real Estate Agents and Managers - Rentals,ECOM
+Medium Transacting Categories,8299,Schools and Educational Services,ECOM
+Medium Transacting Categories,4784,Toll and Bridge Fees,ECOM
+Medium Transacting Categories,6012,Financial Institutions - Merchandise and Services,ECOM
+Medium Transacting Categories,7832,Motion Pictures Theaters,ECOM
+Medium Transacting Categories,4722,Travel Agencies,ECOM
+Medium Transacting Categories,4899,Cable,ECOM
+Medium Transacting Categories,4899,Satellite,ECOM
+Medium Transacting Categories,4899,Other Pay Television,ECOM
+Medium Transacting Categories,4899,Radio Services,ECOM
+All Other Categories,8211,Elementary and Secondary Schools,ECOM
+All Other Categories,5812,Eating Places and Restaurants,ECOM
+All Other Categories,5817,Digital Good - Applications (Excluding Games),ECOM
+All Other Categories,7372,Computer and Data Processing Services,ECOM
+All Other Categories,9311,Tax Payments,ECOM
+All Other Categories,5311,Department Stores,ECOM
+All Other Categories,4131,Bus Lines,ECOM
+All Other Categories,5732,Radio,ECOM
+All Other Categories,5732,Television,ECOM
+All Other Categories,5732,Stereo Stores,ECOM
+All Other Categories,5651,Family Clothing Stores,ECOM
+All Other Categories,5691,Men's and Women's Clothing Stores,ECOM
