@@ -1,4 +1,4 @@
-# 🛡️ AI-Powered UPI Fraud & QR Code Tampering Detection
+# 🛡️ Al Driven detection mechanism for UPI fraud and QR code tampering
 
 An intelligent Flask-based web app to detect potential UPI transaction fraud and digital QR code phishing using AI and Machine Learning.
 
