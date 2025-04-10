@@ -14,3 +14,7 @@ COPY . .
 EXPOSE 5000
 
 CMD ["python", "app.py"]
+COPY rf_model.pkl /app/rf_model.pkl
+COPY xgb_model.pkl /app/xgb_model.pkl
+COPY iso_model.pkl /app/iso_model.pkl
+COPY scaler.pkl /app/scaler.pkl
