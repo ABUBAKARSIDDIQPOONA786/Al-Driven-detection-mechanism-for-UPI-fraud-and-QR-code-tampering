@@ -9,7 +9,7 @@
   <div class="form-container">
     <h2>🧾 QR Code Analysis Report</h2>
 
-    <div class="result success" style="white-space: pre-line;">
+    <div id="result-box" class="result success" style="white-space: pre-line;">
       {{ report }}
     </div>
 
@@ -18,5 +18,18 @@
       <a href="/">🏠 Back to Home</a>
     </div>
   </div>
+  
+  <script>
+    const resultBox = document.getElementById('result-box');
+    const reportText = resultBox.textContent || resultBox.innerText;
+
+    if (reportText.includes("Risk Level: HIGH")) {
+      resultBox.style.backgroundColor = "#ffe5e5";  // Light Red
+    } else if (reportText.includes("Risk Level: MEDIUM")) {
+      resultBox.style.backgroundColor = "#fff8cc";  // Light Yellow
+    } else if (reportText.includes("Risk Level: LOW")) {
+      resultBox.style.backgroundColor = "#e6ffed";  // Light Green
+    }
+  </script>
 </body>
 </html>
