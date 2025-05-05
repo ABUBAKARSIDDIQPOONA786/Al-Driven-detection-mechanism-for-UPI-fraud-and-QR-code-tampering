@@ -144,11 +144,11 @@ def predict_qr_code_safety(qr_data):
 
     risk = 0
     if not is_valid_upi:
-        risk += 50
+        risk += 30
     if phishing_status == "Phishing":
-        risk += 40
+        risk += 60
     if mcc_description == "Unknown MCC":
-        risk += 20
+        risk += 10
 
     summary = f"""
 ✅ UPI ID: {'Valid' if is_valid_upi else 'Invalid'}
