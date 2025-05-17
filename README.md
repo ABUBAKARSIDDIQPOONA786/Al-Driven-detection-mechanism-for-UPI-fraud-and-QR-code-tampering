@@ -11,7 +11,7 @@ An intelligent Flask-based web app to detect potential UPI transaction fraud and
 
 ## 📁 Tech Stack
 - Python + Flask
-- Scikit-learn, XGBoost, TensorFlow
+- XGBoost, Random Forest, Isolation Forest
 - OpenCV, pyzbar for QR decoding
 - HTML5, CSS3 (Modern UI)
 - Trained phishing models & synthetic fraud dataset
@@ -52,7 +52,8 @@ pip install -r requirements.txt
 
 
 ## 📷 Screenshots
-![full app architecture](https://github.com/user-attachments/assets/7e157b29-70e8-401b-94f9-ddfb54666ae0)
+![full app architecture](https://github.com/user-attachments/assets/cf3ad336-3d7d-4d67-b4df-812dbdb46426)
+
 
 
 ## 🧪 Run Locally
