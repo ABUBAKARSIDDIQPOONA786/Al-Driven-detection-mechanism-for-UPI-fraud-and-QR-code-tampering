@@ -52,7 +52,8 @@ pip install -r requirements.txt
 
 
 ## 📷 Screenshots
-*(Insert screenshots here if needed)*
+![full app architecture](https://github.com/user-attachments/assets/7e157b29-70e8-401b-94f9-ddfb54666ae0)
+
 
 ## 🧪 Run Locally
 
